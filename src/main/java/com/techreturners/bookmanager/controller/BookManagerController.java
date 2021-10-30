@@ -22,7 +22,7 @@ public class BookManagerController {
     @GetMapping
     public ResponseEntity<List<Book>> getAllBooks() {
         List<Book> books = bookManagerService.getAllBooks();
-        return new ResponseEntity<>(books, HttpStatus.OK);
+            return new ResponseEntity<>(books, HttpStatus.OK);
     }
 
     @GetMapping({"/{bookId}"})
@@ -41,7 +41,10 @@ public class BookManagerController {
     //User Story 4 - Update Book By Id Solution
     @PutMapping({"/{bookId}"})
     public ResponseEntity<Book> updateBookById(@PathVariable("bookId") Long bookId, @RequestBody Book book) {
+
+
         bookManagerService.updateBookById(bookId, book);
+        //return new ResponseEntity<>(bookManagerService.getBookById(bookId), HttpStatus.OK);
         return new ResponseEntity<>(bookManagerService.getBookById(bookId), HttpStatus.OK);
     }
 
