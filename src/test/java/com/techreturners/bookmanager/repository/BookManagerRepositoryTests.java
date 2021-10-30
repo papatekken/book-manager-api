@@ -37,4 +37,17 @@ public class BookManagerRepositoryTests {
 
     }
 
+    //User Story 5 - Delete Book By Id Solution
+    @Test
+    public void testCreatesAndDeleteBookByIdReturnsNull() {
+
+        Book book = new Book(3L, "Book Three", "This is the description for Book Three", "Person Three", Genre.Education);
+        bookManagerRepository.save(book);
+        bookManagerRepository.delete(book);
+
+        var bookById = bookManagerRepository.findById(book.getId());
+        assertThat(bookById).isEmpty();
+
+    }
+
 }
