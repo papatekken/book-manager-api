@@ -22,7 +22,7 @@ public class BookManagerServiceImpl implements BookManagerService {
     public List<Book> getAllBooks() {
         List<Book> books = new ArrayList<>();
         bookManagerRepository.findAll().forEach(books::add);
-        if(books.isEmpty())
+        if (books.isEmpty())
             throw new BookNotFoundException();
         return books;
     }
@@ -31,7 +31,7 @@ public class BookManagerServiceImpl implements BookManagerService {
     public Book insertBook(Book book) {
 
         if (bookManagerRepository.existsById(book.getId()))
-              throw new BookAlreadyExistsException();
+            throw new BookAlreadyExistsException();
         return bookManagerRepository.save(book);
     }
 

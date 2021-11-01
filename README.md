@@ -1,6 +1,9 @@
 # 📖 Minimalist Book Manager API
 Tech Returners Exercise: API Execrise
-## Name: Allan Yip
+Name: Allan Yip
+Solution:
+- added user story for delete book with test
+- added exception cases with test
 
 ## Introduction
 This is the starter repository for the Further APIs session. It provides a start to creating a Minimalist Book Manager API

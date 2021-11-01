@@ -22,7 +22,7 @@ public class BookManagerController {
     @GetMapping
     public ResponseEntity<List<Book>> getAllBooks() {
         List<Book> books = bookManagerService.getAllBooks();
-            return new ResponseEntity<>(books, HttpStatus.OK);
+        return new ResponseEntity<>(books, HttpStatus.OK);
     }
 
     @GetMapping({"/{bookId}"})
@@ -52,6 +52,6 @@ public class BookManagerController {
     @DeleteMapping({"/{bookId}"})
     public ResponseEntity<Void> DeleteBookById(@PathVariable("bookId") Long bookId) {
         bookManagerService.deleteBookById(bookId);
-        return new ResponseEntity<Void>( HttpStatus.OK);
+        return new ResponseEntity<Void>(HttpStatus.OK);
     }
 }
