@@ -1,6 +1,8 @@
 # 📖 Minimalist Book Manager API
 Tech Returners Exercise: API Execrise
+
 Name: Allan Yip
+
 Solution:
 - added user story for delete book with test
 - added exception cases with test
