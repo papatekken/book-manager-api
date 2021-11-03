@@ -1,5 +1,5 @@
 # 📖 Minimalist Book Manager API
-Tech Returners Exercise: API Execrise
+Tech Returners Exercise: API Exercise
 
 Name: Allan Yip
 
